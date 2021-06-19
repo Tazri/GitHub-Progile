@@ -21,6 +21,7 @@ function getUser(userName){
     .then(data=> {
         main.innerHTML = '';
         createUser(data);
+        addRepos(userName);
     })
     .catch(error=>{
         main.innerHTML = '';
@@ -76,8 +77,6 @@ function createUser(data){
         <!-- end div profile --> 
     `
     main.appendChild(div);
-
-    addRepos(userName);
 }
 
 // userNotFound

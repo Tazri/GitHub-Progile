@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+:root{
+    --var-background : linear-gradient(90deg, rgb(160, 222, 219),rgb(3, 165, 209)) ;
+    --var-color : aliceblue;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+*::-moz-focus-inner,
+*::-moz-focus-outer{
+    outline: none;
+}
+
+body{
+    font-family: 'Viaoda Libre', cursive;
+    background: var(--var-background);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+form{
+    width: 100%;
+    margin: 20px 0px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+input,.profile{
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    background: rgba(240, 248, 255, 0.473);
+    backdrop-filter: blur(2.5px);
+    --webkit-backdrop-filter : blur(2.5px);
+    border-radius: 10px;
+}
+
+input{
+    font-size: 16px;
+    padding: 10px 9px;
+    min-width: 250px;
+    width: 40%;
+    max-width: 500px;
+    color: var(--var-color);
+    color: #333;
+    transition: 0.2s linear;
+}
+
+input:focus{
+    color: aliceblue;
+    border: 1px solid aliceblue;
+}
+
+main{
+    width: 90%;
+}
+
+.profile{
+    margin: 0px auto;
+    min-width: 270px;
+    width: 60%;
+    max-width: 720px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.profile-avater{
+    margin-right: 10px;
+    width: 100px;
+}
+
+.profile-avater img{
+    object-fit: fill;
+    border-radius: 50%;
+    width: 100%;
+}
+
+.profile-info{
+    width: 100%;
+}
+
+.profile-info h2{
+    font-size: 25px;
+}
+
+.bio{
+    margin: 20px 0px;
+}
+
+.status{
+    margin-bottom: 10px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status li{
+    display: i;
+}
+
+.repos{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.repos span{
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 10px ;
+    padding: 7px 15px;
+    background: #03a5d1;
+}
+
+.repos span a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.not-found{
+    margin: 80px auto;
+    text-align-last: center;
+}
+
+@media (max-width : 680px) {
+    .profile{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile h2,p{
+        text-align: center;
+    }
+
+    .bio{
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .profile-avater{
+        width: 170px;
+    }
+    
+}
